@@ -71,7 +71,7 @@ public class Quiz implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(650,650);
         frame.setVisible(true);
-        frame.getContentPane().setBackground(new Color(000000));
+        frame.getContentPane().setBackground(new Color(255,255,255));
         frame.setLayout(null);
         frame.setResizable(false);
         textField.setBounds(0,0,650,50);
@@ -92,19 +92,19 @@ public class Quiz implements ActionListener {
 
 
 
-        textField.setBackground(new Color(25,25,25));
-        textField.setForeground(new Color(25,255,0));
+        textField.setBackground(new Color(255,255,255));
+        textField.setForeground(new Color(000000));
         textField.setFont(new Font("Courier",Font.BOLD,30));
         textField.setBorder(BorderFactory.createBevelBorder(1));
         textField.setHorizontalAlignment(JTextField.CENTER);
         textField.setEditable(false);
         textField.setText("Quiz");
 
-        textArea.setBackground(new Color(25,25,25));
+        textArea.setBackground(new Color(255,255,255));
         textArea.setBounds(0,50,650,50);
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
-        textArea.setForeground(new Color(25,255,0));
+        textArea.setForeground(new Color(000000));
         textArea.setFont(new Font("Courier",Font.BOLD,20));
         textArea.setBorder(BorderFactory.createBevelBorder(1));
         textArea.setEditable(false);
@@ -161,7 +161,7 @@ public class Quiz implements ActionListener {
 
 
         seconds_left.setBounds(535,510,100,100);
-        seconds_left.setBackground(new Color(25,25,25));
+        seconds_left.setBackground(new Color(255,255,255));
         seconds_left.setForeground(new Color(255,0,0));
         seconds_left.setFont(new Font("Courier",Font.BOLD,50));
         seconds_left.setBorder(BorderFactory.createBevelBorder(1));
@@ -177,16 +177,16 @@ public class Quiz implements ActionListener {
         time_label.setText("Time");
 
         number_right.setBounds(225,225,200,100);
-        number_right.setBackground(new Color(25,25,25));
-        number_right.setForeground(new Color(25,255,0));
+        number_right.setBackground(new Color(255,255,255));
+        number_right.setForeground(new Color(111));
         number_right.setFont(new Font("Courier",Font.BOLD,50));
         number_right.setBorder(BorderFactory.createBevelBorder(1));
         number_right.setHorizontalAlignment(JTextField.CENTER);
         number_right.setEditable(false);
 
         percentage.setBounds(225,325,200,100);
-        percentage.setBackground(new Color(25,25,25));
-        percentage.setForeground(new Color(25,255,0));
+        percentage.setBackground(new Color(255,255,255));
+        percentage.setForeground(new Color(111));
         percentage.setFont(new Font("Courier",Font.BOLD,50));
         percentage.setBorder(BorderFactory.createBevelBorder(1));
         percentage.setHorizontalAlignment(JTextField.CENTER);
@@ -295,6 +295,7 @@ public class Quiz implements ActionListener {
         buttonC.setEnabled(true);
         buttonD.setEnabled(true);
         result=(int)((correct_guess/(double)total_questions)*100);
+
 
         textField.setText("Results: ");
         textArea.setText("");
