@@ -3,7 +3,7 @@ import java.io.FileOutputStream;
 
 import java.util.Scanner;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class app {
 
@@ -13,10 +13,12 @@ public class app {
         String q2="What color are bananas?\n"+"(a)red/green\n(b)yellow\n(c)blue\n";
         String filename = "test.bin";
         try {
-            ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(filename));
-            os.writeObject(q1);
+            DataOutputStream os = new DataOutputStream(new FileOutputStream(filename));
+           os.writeBytes(q1);
 
-            os.writeObject(q2);
+            os.writeBytes(q2);
+            os.flush();
+            os.close();
 
 
 
